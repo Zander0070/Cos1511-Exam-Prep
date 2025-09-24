@@ -1,0 +1,28 @@
+// Exercis 3.1 from the book "Programming: Principles and Practice Using C++" by Bjarne Stroustrup
+#include <iostream>
+using namespace std;
+
+int main(){
+
+	int array[3] = {};
+	int Counter = 0;
+
+	for (int i = 0; i < 3; i++)
+	{
+		cout << "Please enter value " << i << " : ";
+		cin >> array[i];
+		Counter++;
+	} 
+
+	for (int i = 0; i < 3; i++)
+	{
+		cout << array[Counter -1 ] << endl;
+		Counter--;
+	}
+
+	return 0;
+};
+
+
+
+
