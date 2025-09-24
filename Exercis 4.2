@@ -1,0 +1,30 @@
+// Exercis 4.2 from the book "Programming: Principles and Practice Using C++" by Bjarne Stroustrup
+#include <iostream>
+using namespace std;
+
+int main() {
+
+	int const BoxSize = 10;
+	int const BoxPrice = 20;
+	int ItemCount = 0;
+	int BoxCount = 0;
+	int ItemLeftover = 0;
+
+	cout << "How many items do you need to ship?" << endl;
+	cin >> ItemCount;
+
+	BoxCount = ItemCount / BoxSize;
+	BoxCount = abs(BoxCount);
+
+	ItemLeftover = ItemCount % BoxSize;
+
+	cout << "Please note you will need " << BoxCount << " boxes for this shipment.\n" << "Which will be a total of R" << BoxCount * BoxPrice  << endl;
+	cout << "Please note the remainder will be " << ItemLeftover << " items." << endl;
+ 
+
+
+};
+
+
+
+
