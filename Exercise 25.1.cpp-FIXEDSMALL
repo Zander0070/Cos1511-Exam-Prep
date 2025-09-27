@@ -1,0 +1,78 @@
+#include <iostream>
+#include <cmath>
+#include <algorithm> // For std::swap
+using namespace std;
+
+int DataSetA[10] = {};
+int Counter = 0;
+
+void static InsertingData() {
+	
+	int Input = 0;
+
+	for (int i = 0; i < 10; i++)
+	{
+		Counter++;
+		cout << "Please enter Value : " << i + 1 << " : ";
+		cin >> Input;
+		DataSetA[i] = Input;
+	}
+
+}
+
+
+void SearchingAlgo(int num = 0) {
+	cout << endl;
+	bool found = false;
+	for (int i = 0; i < 10; i++)
+	{
+		if (num == DataSetA[i]) {
+			cout << "Number : " << num << " was found in the array, jippy " << endl;
+			found = true;
+		} 
+		
+	}
+
+	if (found == false)
+	{
+		cout << "Number : " << num << " was not found in the array, jippy " << endl;
+	}
+}
+
+int SeachForSmallest() {
+	int Smallest = DataSetA[0];
+	for (int i = 0; i < 10; i++)
+	{
+		if (DataSetA[i] < Smallest)
+		{
+			Smallest = DataSetA[i];
+			cout << "WDadwd";
+		}
+	}
+
+	return Smallest;
+}
+
+void ReverseArray() {
+	Counter--;
+	cout << endl << "Reverse Order "<< endl << " =============== " << endl;
+	for (int i = 0; i < 11; i++)
+	{
+		cout << DataSetA[Counter] << ", ";
+		Counter--;
+	}
+}
+
+int main() {
+	
+	int SearchedNum = 0, SmallestNum = 0;
+	InsertingData();
+	cout << endl << "=============" << endl << "What number do you want to search for in the array : ";
+	cin >> SearchedNum;
+
+	SearchingAlgo(SearchedNum);
+
+	cout << endl << "The smallest Num in the array is : " << SmallestNum;
+	ReverseArray();
+
+}
