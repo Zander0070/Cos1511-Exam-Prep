@@ -1,0 +1,48 @@
+ //Determines the sum and product of 1 to n
+#include <iostream>
+using namespace std;
+
+int main(){
+	int width = 2, Counter = 1;
+	int height = 5;
+	bool lastrow = true;
+
+	for (int i = 0; i < 2; i++)
+	{
+		
+
+		for (int I = 0; I < width; I++)
+		{
+			cout << "* ";
+			Counter++;
+
+			if (width == Counter) {
+				for (int I = 0; I < height; I++) {
+					cout << endl << "*" << " \t" << "*";
+				}
+				Counter = 0;
+
+				if (Counter == 0)
+				{
+					cout << "\n";
+					width--;
+					
+					for (int I = 0; I <= width; I++) {
+						cout << "* ";
+						
+						
+					}
+				}
+				
+			}
+
+		}
+
+		exit(0);
+
+	}
+
+
+
+
+}
